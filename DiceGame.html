@@ -1,0 +1,31 @@
+<html>
+<head><title>DiceGame</title></head>
+<body>
+    <center><h1>DiceGame</h1></center>
+<p>paina nappia heittääksesi</p>
+<button onclick="dice()">Heitä!</button>
+<p id="pResult"></p><br>
+
+<script>
+
+    var playerWon = 0;
+    var cpuWon = 0;
+function dice() {
+    var iPlayer = Math.floor((Math.random() * 6) + 1);
+    var iCpu = Math.floor((Math.random() * 6) + 1);
+    var result;
+    if(iPlayer > iCpu){
+        result = "Voitit!!!";
+        playerWon += 1;
+    }else if(iPlayer < iCpu){
+        result = "Tietokone voitti!";
+        cpuWon += 1;
+    }else{
+        result = "Tasapeli";
+    }
+    var pResult = document.getElementById("pResult")
+    pResult.innerHTML = result + "<br>Player: " + iPlayer + "<br>Computer: " + iCpu + "<br><br><u>Statistics</u><br>Player: " + playerWon + "<br> Computer: " + cpuWon;
+}
+</script>
+</body>
+</html>
