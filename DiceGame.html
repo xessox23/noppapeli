@@ -38,7 +38,7 @@ function dice() {
 function cpuDice(){
     var i = Math.floor((Math.random() * 6) + 1);
     for (var j = 0; j < i; j++) {
-        console.log('cpu heittää');
+        console.log('cpu heittää')
         dice();
     }
     lopeta();
@@ -55,7 +55,7 @@ function lopeta() {
   
     refresh();
 
-    // pResult.innerHTML = result + "<br>Player: " + iPlayer + "<br>Computer: " + iCpu + "<br><br><u>Statistics</u><br>Player: " + playerWon + "<br> Computer: " + cpuWon;
+     pResult.innerHTML = result + "<br>Player: " + iPlayer + "<br>Computer: " + iCpu + "<br><br><u>Statistics</u><br>Player: " + playerWon + "<br> Computer: " + cpuWon;
 }
 
 
@@ -71,21 +71,19 @@ function refresh(){
     }
 }
 
+-     var result;		
+-     var pResult = document.getElementById("pResult")		
+-		
+-     if(iPlayer > iCpu){		
+-        result = "Voitit!!!";		
+-         playerWon += 1;		
+-     }else if(iPlayer < iCpu){		
+-       result = "Tietokone voitti!";		
+-         cpuWon += 1;		
+-     }else{		
+-        result = "Tasapeli";		
+-     }
 
-
-  // var iCpu = Math.floor((Math.random() * 6) + 1);
-    // var result;
-    // var pResult = document.getElementById("pResult")
-
-    // if(iPlayer > iCpu){
-    //     result = "Voitit!!!";
-    //     playerWon += 1;
-    // }else if(iPlayer < iCpu){
-    //     result = "Tietokone voitti!";
-    //     cpuWon += 1;
-    // }else{
-    //     result = "Tasapeli";
-    // }
 
 
 
